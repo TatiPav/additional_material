@@ -6,10 +6,11 @@ themeButton.onclick = function() {
 };
 
 let message = document.querySelector('.subscription-message');
-
 let form = document.querySelector('.subscription');
+let email = document.querySelector('.subscription-email');
+
 form.onsubmit = function(evt) {
-  // Инструкция ниже отменяет отправку данных
   evt.preventDefault();
-  message.textContent = 'Форма отправлена!';
+  // Измените значение textContent на следующей строке
+  message.textContent = 'Адрес ' + email.value + ' добавлен в список получателей рассылки.';
 };
